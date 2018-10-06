@@ -14,10 +14,10 @@
     <artifactId>parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-
+	<!--
     <name>parent</name>
     <url>https://www.aibyd.com:8081</url>
-
+	-->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -31,6 +31,8 @@
 		<commons-beanutils.version>1.9.2</commons-beanutils.version>
 		<commons-logging.version>1.2</commons-logging.version>
 		<fastjson.version>1.2.7</fastjson.version>
+		<log4j.version>1.2.17</log4j.version>
+		<enjoy.version>3.4</enjoy.version>
     </properties>
 
     <modules>
@@ -65,13 +67,13 @@
 		<snapshotRepository>
 			<id>aibyd-snapshot</id>
 			<name>Snapshot Repository</name>
-			<url>http://www.aibyd.com:8081/repository/aibyd-snapshot/</url>
+			<url>http://www.ai-sunny.com:8081/repository/aibyd-snapshot/</url>
 		</snapshotRepository>
 
 		<repository>
 			<id>aibyd-releases</id>
 			<name>Releases Repository</name>
-			<url>http://www.aibyd.com:8081/repository/aibyd-releases/</url>
+			<url>http://www.ai-sunny.com:8081/repository/aibyd-releases/</url>
 		</repository>
 
 	</distributionManagement>
@@ -80,7 +82,7 @@
 		<pluginRepository>
 			<id>nexus</id>
 			<name>Nexus Plugin Repository</name>
-			<url>http://www.aibyd.com:8081/repository/maven-public</url>
+			<url>http://www.ai-sunny.com:8081/repository/maven-public</url>
 			<snapshots>
 				<enabled>true</enabled>
 			</snapshots>
@@ -92,13 +94,6 @@
 
     <build>
 		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<fork>true</fork>
-				</configuration>
-			</plugin>
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
